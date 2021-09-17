@@ -1,3 +1,7 @@
+# README (Beni Oku)
+
+
+
 This program is a hello world style application made using Tkinter with Python3 and this program is free software.
 
 License: [GPL v3](https://www.gnu.org/licences/gpl-3.0.txt)
