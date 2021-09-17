@@ -20,4 +20,4 @@ Lisans: [GPL v3](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 ![About](https://user-images.githubusercontent.com/82509753/133830798-a9676f14-4b2a-4dd3-b21d-ce991248a11e.png)
 
-![License](https://user-images.githubusercontent.com/82509753/133830801-059af09d-9e4e-4385-9f88-fffdc4028c14.png)
+![License](https://user-images.githubusercontent.com/82509753/133831598-e2171a37-6b21-49e4-9c6a-3b4907df465f.png)
