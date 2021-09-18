@@ -111,12 +111,12 @@ def about():
 # Create button: / Butonu oluştur:
 btn1=Button(window)
 # Configre button: / Butonu özelleştir:
-btn1.config(cursor="hand2", activebackground="#000000", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="1", text="Hakkında\nAbout", font="Arial 9 bold", command=about)
+btn1.config(cursor="hand2", activebackground="#000000", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="1", text="About\nHakkında", font="Arial 9 bold", command=about)
 
 # Create button: / Butonu oluştur:
 btn2=Button(window)
 # Configre button: / Butonu özelleştir:
-btn2.config(cursor="hand2", activebackground="#0000FF", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="3", text="Tamam!\nOkey!", font="Arial 10 bold", command=window.quit)
+btn2.config(cursor="hand2", activebackground="#0000FF", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="3", text="OK!\nTamam!", font="Arial 10 bold", command=window.quit)
 
 # Fixing to window: / Pencereye sabitleme:
 btn1.pack()
