@@ -14,9 +14,7 @@ Lisans: [GPL v3](https://www.gnu.org/licenses/gpl-3.0.txt)
 
 # Photos (Fotoğraflar)
 
-
-
-![Main](https://user-images.githubusercontent.com/82509753/133830803-b2133bd5-82cb-4955-ad22-19a2d678d12f.png)
+![Main](https://user-images.githubusercontent.com/82509753/133882385-9355ff5a-7fc5-40c4-953d-2105377e07d6.png)
 
 ![About](https://user-images.githubusercontent.com/82509753/133830798-a9676f14-4b2a-4dd3-b21d-ce991248a11e.png)
 
