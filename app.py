@@ -19,12 +19,12 @@
 #You should have received a copy of the GNU General Public License
 #along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
 ### Import Tkinter library: / Tkinter kütüphanesini ekle:
 from tkinter import *
 from tkinter import messagebox
 ### Import 'os' module: / 'os' modülünü ekle:
 import os
+
 
 ### Main:/Ana:
 
@@ -33,7 +33,7 @@ window=Tk()
 # Relabel main window: / Ana pencereyi yeniden adlandır:
 window.title("Hi.")
 # Configre main window: / Ana pencereyi özelleştir:
-window.geometry("400x400")
+window.geometry("600x600")
 window.config(background="#000000")
 window.resizable(0, 0)
 
@@ -118,10 +118,34 @@ btn2=Button(window)
 # Configre button: / Butonu özelleştir:
 btn2.config(cursor="hand2", activebackground="#0000FF", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="3", text="OK!\nTamam!", font="Arial 10 bold", command=window.quit)
 
+# If "c_btn1" clicked: / Eğer 'c_btn1' tıklandıysa:
+def c_btn1_clicked():
+    print("Check button is clicked.\nOnay butonu tıklandı.\n")
+    messagebox.showinfo("Info","Check button is clicked.\nOnay butonu tıklandı.")
+
+# Create and configre new text: / Yeni metni oluştur ve özelleştir:
+s_txt1=Label(window, background="#000000", foreground="#FFFFFF", text="\n\n\n")
+
+# Create and configre check button: / Onay butonunu oluştur ve özelleştir:
+c_btn1=Checkbutton(text="Let's click!\nHaydi tıkla!", cursor="hand2", activebackground="red", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="0", command=c_btn1_clicked)
+
+# Create and setup list box: / Liste kutusunu oluştur ve ayarla:
+list=Listbox(window, background="#FFFFFF")
+list_=["Python","Tkinter","Hello world!"]
+for i in list_:
+    list.insert(END, i)
+
+# Create and configre new text: / Yeni metni oluştur ve özelleştir:
+s_txt2=Label(window, background="#000000", foreground="#FFFFFF", text="\n\n\n")
+
 # Fixing to window: / Pencereye sabitleme:
 btn1.pack()
 txt1.pack()
 btn2.pack()
+s_txt1.pack()
+c_btn1.pack()
+s_txt2.pack()
+list.pack()
 
 # Start endless loop: / Sonsuz döngüyü başlat:
 print("Starting endless loop and software...\nSonsuz döngü ile yazılım başlatılıyor...\n")
