@@ -22,7 +22,7 @@ import os
 # Create main window: / Ana pencereyi oluştur:
 window=Tk()
 # Relabel main window: / Ana pencereyi yeniden adlandır:
-window.title("Hi.")
+window.title("peytehow")
 # Configre main window: / Ana pencereyi özelleştir:
 window.geometry("600x600")
 window.config(background="#000000")
