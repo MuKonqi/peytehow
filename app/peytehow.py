@@ -42,17 +42,6 @@ txt1=Label(window)
 # Configre first text: / Birinci metni özelleştir:
 txt1.config(font="arial 20 bold", background="#000000", foreground="#FFFFFF", text="\n\nMerhaba dünya!\nHello world!\n\n")
 
-# License: / License:
-def open_license():
-    os.system("xdg-open http://www.wtfpl.net/txt/copying/")
-    messagebox.showinfo("Warning","The link has been opened.\nBağlantı açılmıştır.")
-
-# License link: / Lisans bağlantısı:
-def copy_license_url():
-    window.clipboard_append("http://www.wtfpl.net/txt/copying/")
-    window.update()
-    messagebox.showinfo("Warning","The link has been copied.\nBağlantı kopyalanmıştır.")
-
 # License: / Lisans:
 def license():
     # Create third window: / Üçüncü pencereyi oluştur:
@@ -64,8 +53,19 @@ def license():
 
     # Create and configre new text: / Yeni metni oluştur ve ayarla:
     txt1_w3=Label(window3)
-    txt1_w3.config(font="arial 8 bold", background="#000000", foreground="#FFFFFF", text="\nDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nVersion 2, December 2004\n\nCopyright (C) 2004 Sam Hocevar <sam@hocevar.net>\n\nEveryone is permitted to copy and distribute verbatim or modified\ncopies of this license document, and changing it is allowed as long\ncopies of this license document, and changing it is allowed as long\n\nDO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE\nTERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION\n\n0. You just DO WHAT THE FUCK YOU WANT TO.\n")
+    txt1_w3.config(font="arial 8 bold", background="#000000", foreground="#FFFFFF", text="\nYou just DO WHAT THE FUCK YOU WANT TO.\nSadece NE HALT EDERSEN ET.\n")
     txt1_w3.pack()
+    # Open license: / Lisansı a.:
+    def open_license():
+        os.system("xdg-open http://www.wtfpl.net/txt/copying/")
+        messagebox.showinfo("Warning","The link has been opened.\nBağlantı açılmıştır.")
+
+    # Copy license link: / Lisans bağlantısını kopyala:
+    def copy_license_url():
+        window3.clipboard_clear()
+        window3.update()
+        window3.clipboard_append("http://www.wtfpl.net/txt/copying/")
+        window3.update()
 
     # Create and configre new button: / Yeni butonu oluştur ve ayarla:
     btn1_w3=Button(window3)
