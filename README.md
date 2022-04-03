@@ -11,6 +11,6 @@ Lisans: [WTFPL](https://www.wtfpl.net/text/copying)
 
 
 # Photos (Fotoğraflar)
-![main](https://user-images.githubusercontent.com/82509753/161419910-47db8695-b652-4a4b-951b-d34ab38c48a1.png)
-![about](https://user-images.githubusercontent.com/82509753/161419928-f5198c00-e08f-4cf6-985f-2b28eb3a5662.png)
-![license](https://user-images.githubusercontent.com/82509753/161419939-9f621a5f-da2e-41b0-b33e-7921cd1677f2.png)
+![main](https://user-images.githubusercontent.com/82509753/161420065-08a51a8e-f81f-43d9-a3bd-19341bd04cb4.png)
+![about](https://user-images.githubusercontent.com/82509753/161420073-babc1230-d23f-4523-9eff-c92877c060af.png)
+![license](https://user-images.githubusercontent.com/82509753/161420077-322573ae-4323-4b57-938a-10bd923c0057.png)
