@@ -55,7 +55,8 @@ def license():
     txt1_w3=Label(window3)
     txt1_w3.config(font="arial 8 bold", background="#000000", foreground="#FFFFFF", text="\nYou just DO WHAT THE FUCK YOU WANT TO.\nSadece NE HALT EDERSEN ET.\n")
     txt1_w3.pack()
-    # Open license: / Lisansı a.:
+    
+    # Open license: / Lisansı aç:
     def open_license():
         os.system("xdg-open http://www.wtfpl.net/txt/copying/")
         messagebox.showinfo("Warning","The link has been opened.\nBağlantı açılmıştır.")
