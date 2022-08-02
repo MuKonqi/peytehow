@@ -2,12 +2,12 @@
 
 This program is a hello world style application made using Tkinter with Python3 and this program is free software.
 
-License: [WTFPL](https://www.wtfpl.net/text/copying)
+License: Apache 2.0
 
 
 Bu program Python3 ile Tkinter kullanılarak yapılmış merhaba dünya tarzı bir uygulamadır ve bu program özgür yazılımdır.
 
-Lisans: [WTFPL](https://www.wtfpl.net/text/copying)
+Lisans: Apache 2.0
 
 
 # Photos (Fotoğraflar)
