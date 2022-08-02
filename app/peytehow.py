@@ -6,8 +6,17 @@
 
 # Copyright (C) 2021-22 Muhammed Abdurrahman (MuKonqi)
 
-# You just DO WHAT THE FUCK YOU WANT TO.
-# Sadece NE HALT EDERSEN ET.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+
+# http://www.apache.org/licenses/LICENSE-2.0
+
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 
 ### Import Tkinter library: / Tkinter kütüphanesini ekle:
@@ -24,7 +33,6 @@ window=Tk()
 # Relabel main window: / Ana pencereyi yeniden adlandır:
 window.title("peytehow")
 # Configre main window: / Ana pencereyi özelleştir:
-window.geometry("600x600")
 window.config(background="#000000")
 window.resizable(0, 0)
 
@@ -36,11 +44,12 @@ window.config(menu=menu1)
 about=Menu(menu1, tearoff=0)
 menu1.add_cascade(label="File / Dosya",menu=about)
 about.add_command(label="Quit / Çıkış", command=window.quit)
+peytehow=Menu(menu1, tearoff=0)
 
 # Create first text: / Birinci metni oluştur:
 txt1=Label(window)
 # Configre first text: / Birinci metni özelleştir:
-txt1.config(font="arial 20 bold", background="#000000", foreground="#FFFFFF", text="\n\nMerhaba dünya!\nHello world!\n\n")
+txt1.config(font="arial 20 bold", background="#000000", foreground="#FFFFFF", text="\nMerhaba dünya!\nHello world!\n")
 
 # License: / Lisans:
 def license():
@@ -53,19 +62,19 @@ def license():
 
     # Create and configre new text: / Yeni metni oluştur ve ayarla:
     txt1_w3=Label(window3)
-    txt1_w3.config(font="arial 8 bold", background="#000000", foreground="#FFFFFF", text="\nYou just DO WHAT THE FUCK YOU WANT TO.\nSadece NE HALT EDERSEN ET.\n")
+    txt1_w3.config(font="arial 10 bold", background="#000000", foreground="#FFFFFF", text='\n\nCopyright 2021-22 Muhammed Abdurrahman\n\nLicensed under the Apache License, Version 2.0 (the "License");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\nhttp://www.apache.org/licenses/LICENSE-2.0\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an "AS IS" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.\n\n')
     txt1_w3.pack()
     
     # Open license: / Lisansı aç:
     def open_license():
-        os.system("xdg-open http://www.wtfpl.net/txt/copying/")
+        os.system("xdg-open http://www.apache.org/licenses/LICENSE-2.0")
         messagebox.showinfo("Warning","The link has been opened.\nBağlantı açılmıştır.")
 
     # Copy license link: / Lisans bağlantısını kopyala:
     def copy_license_url():
         window3.clipboard_clear()
         window3.update()
-        window3.clipboard_append("http://www.wtfpl.net/txt/copying/")
+        window3.clipboard_append("http://www.apache.org/licenses/LICENSE-2.0")
         window3.update()
 
     # Create and configre new button: / Yeni butonu oluştur ve ayarla:
@@ -89,11 +98,6 @@ def about():
     window2.title("About")
     window2.config(background="#000000")
     window2.resizable(0, 0)
-
-    # # Create and configre new text: / Yeni metni oluştur ve ayarla:
-    # txt1_w2=Label(window2)
-    # txt1_w2.config(font="arial 8 bold", background="#000000", foreground="#FFFFFF", text="This program is a hello world style application made using Tkinter with Python3 and this program is free software.\nLicense: GNU GPL 3.0\nDeveloper: androidprotmmas (Muhammed Abdurrahman)\n\nBu program Python3 ile Tkinter kullanılarak yapılmış merhaba dünya tarzı bir uygulamadır ve bu program özgür yazılımdır.\nLisans: GNU GPL 3.0\nGeliştirici: MuKonqi (Muhammed Abdurrahman)\n")
-    # txt1_w2.pack()
     
     # Create copy links: / Linkleri kopyalamayı oluştur:
     def peytehowlink():
@@ -147,18 +151,13 @@ def about():
     btn2_w2.pack()
     btn3_w2=Button(window2, font="arial 12 bold", cursor="hand2", activeforeground="#0099FF", activebackground="#000000", background="#000000", foreground="#FFFFFF", text="Developer: Muhammed Abdurrahman (MuKonqi)\nGeliştirici: Muhammed Abdurrahman (MuKonqi)", command=developeropen)
     btn3_w2.pack()
-    btn4_w2=Button(window2, font="arial 12 bold", cursor="hand2", activeforeground="#0099FF", activebackground="#000000", background="#000000", foreground="#FFFFFF", text="License: WTFPL\nLisans: WTFPL", command=license)
+    btn4_w2=Button(window2, font="arial 12 bold", cursor="hand2", activeforeground="#0099FF", activebackground="#000000", background="#000000", foreground="#FFFFFF", text="License: Apache 2.0\nLisans: Apache 2.0", command=license)
     btn4_w2.pack()
 
 # Create button: / Butonu oluştur:
 btn1=Button(window)
 # Configre button: / Butonu özelleştir:
-btn1.config(cursor="hand2", activebackground="#000000", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="1", text="About\nHakkında", font="Arial 9 bold", command=about)
-
-# Create button: / Butonu oluştur:
-btn2=Button(window)
-# Configre button: / Butonu özelleştir:
-btn2.config(cursor="hand2", activebackground="#0000FF", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="3", text="OK!\nTamam!", font="Arial 10 bold", command=window.quit)
+btn1.config(cursor="hand2", activebackground="#0000FF", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="3", text="OK!\nTamam!", font="Arial 10 bold", command=window.quit)
 
 # If "c_btn1" clicked: / Eğer 'c_btn1' tıklandıysa:
 def c_btn1_clicked():
@@ -166,10 +165,21 @@ def c_btn1_clicked():
     messagebox.showinfo("Info","Check button is clicked.\nOnay butonu tıklandı.")
 
 # Create and configre new text: / Yeni metni oluştur ve özelleştir:
-s_txt1=Label(window, background="#000000", foreground="#FFFFFF", text="\n\n\n")
+s_txt1=Label(window, background="#000000", foreground="#FFFFFF", text="\n")
 
 # Create and configre check button: / Onay butonunu oluştur ve özelleştir:
 c_btn1=Checkbutton(text="Let's click!\nHaydi tıkla!", cursor="hand2", activebackground="red", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="0", command=c_btn1_clicked)
+
+# Add and setup entry widget and its def: / Girişi ve onun def'ini ekle ve ayarla:
+def def_entry():
+    entry2=entry1.get()
+    print("I write: "+entry2)
+    messagebox.showinfo("What did I write?",entry2)
+entry1=Entry(window)
+e_btn1=Button(cursor="hand2", activebackground="#0000FF", activeforeground="#FFFFFF", background="#FFFFFF", borderwidth="3", text="What did I write?\nBen ne yazdım?", font="Arial 10 bold", command=def_entry)
+
+# Create and configre new text: / Yeni metni oluştur ve özelleştir:
+s_txt2=Label(window, background="#000000", foreground="#FFFFFF", text="\n\n\n")
 
 # Create and setup list box: / Liste kutusunu oluştur ve ayarla:
 list=Listbox(window, background="#FFFFFF")
@@ -178,16 +188,23 @@ for i in list_:
     list.insert(END, i)
 
 # Create and configre new text: / Yeni metni oluştur ve özelleştir:
-s_txt2=Label(window, background="#000000", foreground="#FFFFFF", text="\n\n\n")
+s_txt3=Label(window, background="#000000", foreground="#FFFFFF", text="\n\n\n")
 
 # Fixing to window: / Pencereye sabitleme:
-btn1.pack()
 txt1.pack()
-btn2.pack()
+btn1.pack()
 s_txt1.pack()
 c_btn1.pack()
 s_txt2.pack()
+entry1.pack()
+e_btn1.pack()
+s_txt3.pack()
 list.pack()
+
+# Congigre menu: / Menüyü özelleştir:
+menu1.add_cascade(label="peytehow",menu=peytehow)
+peytehow.add_command(label="About / Hakkında", command=about)
+peytehow.add_command(label="License / Lisans", command=license)
 
 # Start endless loop: / Sonsuz döngüyü başlat:
 print("Starting endless loop and software...\nSonsuz döngü ile yazılım başlatılıyor...\n")
