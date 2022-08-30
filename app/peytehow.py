@@ -31,7 +31,7 @@ import os
 # Create main window: / Ana pencereyi oluştur:
 window=Tk()
 # Relabel main window: / Ana pencereyi yeniden adlandır:
-window.title("peytehow")
+window.title("Peytehow")
 # Configre main window: / Ana pencereyi özelleştir:
 window.config(background="#000000")
 window.resizable(0, 0)
@@ -44,7 +44,7 @@ window.config(menu=menu1)
 about=Menu(menu1, tearoff=0)
 menu1.add_cascade(label="File / Dosya",menu=about)
 about.add_command(label="Quit / Çıkış", command=window.quit)
-peytehow=Menu(menu1, tearoff=0)
+Peytehow=Menu(menu1, tearoff=0)
 
 # Create first text: / Birinci metni oluştur:
 txt1=Label(window)
@@ -100,10 +100,10 @@ def about():
     window2.resizable(0, 0)
     
     # Create copy links: / Linkleri kopyalamayı oluştur:
-    def peytehowlink():
+    def Peytehowlink():
         window2.clipboard_clear()
         window2.update()
-        window2.clipboard_append("https://github.com/MuKonqi/peytehow")
+        window2.clipboard_append("https://github.com/MuKonqi/Peytehow")
         window2.update()
         messagebox.showinfo("Warning","The link has been copied.\nBağlantı kopyalanmıştır.")
     def fosslink():
@@ -121,12 +121,12 @@ def about():
     
     # For Unix-like: / Unix benzeri için:    
     # Create open links: / Linkleri açmayı oluştur
-    def peytehowopen():
+    def Peytehowopen():
         if os.name == "posix":
-            os.system("xdg-open https://github.com/MuKonqi/peytehow")
+            os.system("xdg-open https://github.com/MuKonqi/Peytehow")
             messagebox.showinfo("Warning","The link has been opened.\nBağlantı açılmıştır.")
         else:
-            peytehowlink()
+            Peytehowlink()
     def fossopen():
         if os.name == "posix":
             os.system("xdg-open https://www.gnu.org/philosophy/free-sw.tr.html")
@@ -140,10 +140,10 @@ def about():
         else:
             developerlink()
 
-    # Create butons but like texts: / Butonlar ama metinlere benzeyenleri oluştur:
+    # Create buttons but like texts: / Butonlar ama metinlere benzeyenleri oluştur:
     space1_w2=Label(window2, background="#000000", foreground="#FFFFFF", text="\n", font="arial 7")
     space1_w2.pack()
-    btn1_w2=Button(window2, font="arial 15 bold italic", cursor="hand2", activeforeground="#0099FF", activebackground="#000000", background="#000000", foreground="#FFFFFF", text="peytehow\nHello world style application made using Tkinter with Python3.\nPython3 ile Tkinter kullanılarak yapılmış 'Merhaba dünya!' tarzı uygulama.", command=peytehowopen)
+    btn1_w2=Button(window2, font="arial 15 bold italic", cursor="hand2", activeforeground="#0099FF", activebackground="#000000", background="#000000", foreground="#FFFFFF", text="Peytehow\nHello world style application made using Tkinter with Python3.\nPython3 ile Tkinter kullanılarak yapılmış 'Merhaba dünya!' tarzı uygulama.", command=Peytehowopen)
     btn1_w2.pack()
     space2_w2=Label(window2, background="#000000", foreground="#FFFFFF", text="\n", font="arial 1")
     space2_w2.pack()    
@@ -202,9 +202,9 @@ s_txt3.pack()
 list.pack()
 
 # Congigre menu: / Menüyü özelleştir:
-menu1.add_cascade(label="peytehow",menu=peytehow)
-peytehow.add_command(label="About / Hakkında", command=about)
-peytehow.add_command(label="License / Lisans", command=license)
+menu1.add_cascade(label="Peytehow",menu=Peytehow)
+Peytehow.add_command(label="About / Hakkında", command=about)
+Peytehow.add_command(label="License / Lisans", command=license)
 
 # Start endless loop: / Sonsuz döngüyü başlat:
 print("Starting endless loop and software...\nSonsuz döngü ile yazılım başlatılıyor...\n")
